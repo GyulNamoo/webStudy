@@ -6,7 +6,7 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
 	<!-- HTML문법 --> 
 	<%
 		// 자바 코딩 영역 => 자바 문법을 사용

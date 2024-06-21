@@ -5,7 +5,7 @@
  	String strPage=request.getParameter("page");
  	if(strPage==null)
  		strPage="1";
- 	
+ 	 
  	int curpage=Integer.parseInt(strPage);
  	
  	GoodsDAO dao=GoodsDAO.newInstance();
