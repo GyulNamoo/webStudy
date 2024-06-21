@@ -1,15 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body> 
-	<!-- HTML¹®¹ı --> 
+	<!-- HTMLë¬¸ë²• --> 
 	<%
-		// ÀÚ¹Ù ÄÚµù ¿µ¿ª => ÀÚ¹Ù ¹®¹ıÀ» »ç¿ë
+		// ìë°” ì½”ë”© ì˜ì—­ => ìë°” ë¬¸ë²•ì„ ì‚¬ìš©
 		for(int i=1; i<=10; i++)
 		{
 	%>

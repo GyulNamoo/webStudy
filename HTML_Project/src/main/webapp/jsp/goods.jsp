@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="java.util.*,com.sist.dao.*"%>
-<% taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
  <%
  	String strPage=request.getParameter("page");
  	if(strPage==null)
@@ -48,22 +48,19 @@ opacity: 0.1
 <body>
 	<div class="container">
 		<div class="row">
-		<c:forEach var="vo" items="$(list )">
+			<c:forEach var="vo" items="${list }">
 		<div class="col-md-3">
     <div class="thumbnail">
       <a href="#">
-        <img src="<%=vo.getPoster() %>"alt="Lights" style="width:100%">
+      <img src="${vo.poster }" alt="Lights" style="width:100%">
         <div class="caption">
         <p>${vo.name }</p>
-          <p><%=vo.getName() %></p>
         </div>
       </a>
     </div>
   </div>
-		<%
-			}
-		%>
-		</div>
+   </c:forEach>
+	</div>
 		<div class="row">
 		<a href = "goods.jsp?page=<%= curpage>1?curpage-1:curpage%>"
 		 class="btn btn-sm btn-danger"
