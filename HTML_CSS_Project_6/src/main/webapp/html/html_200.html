@@ -1,0 +1,57 @@
+<!--
+	지정된 영역을 벗어나는 경우 
+	=> hidden / scroll
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body >div{
+		width: 400px;
+		height: 100px;
+		position: relative;
+		border: 2px solid darkblue;
+		/*overflow-y: hidden;*/
+		overflow: scroll;
+	}
+	.d{
+		width: 100px;
+		height: 100px;
+		position: absolute;
+	}
+	.a{
+		background-color: tomato;
+		left: 10px;
+		top: 10px;
+		z-index: 100;
+	}
+	.b{
+		background-color: darkturquoise;
+		left: 50px;
+		top: 50px;
+		z-index: 10;
+	}
+	.c{
+		background-color: mistyrose;
+		left: 90px;
+		top: 90px;
+		z-index: 1;
+	}
+</style>
+</head>
+<body>
+	<h1>
+		폭스바겐, 중국서 휴머노이드 로봇 쓴 '무인 공장' 만든다
+	</h1>
+	<div>
+		<div class="a d"></div>
+		<div class="b d"></div>
+		<div class="c d"></div>
+	</div>
+	<h1>
+		中 로켓, 테스트 도중 실수로 발사돼 폭발
+	</h1>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!--
+	위치 속성 공식
+	position(absolute|relative|pixed)
+	         => static (디폴트)
+	static : HTML 코딩 순서대로 배치 
+	
+	absolute : 원하는 위치에 태그 배치 => 좌표(브라우저)
+			   직접 배치 (top|left|bottom|right)
+	relative : 이전 태그의 위치를 참조 배치 (위에 있는 태그)
+			   <img><img>
+			   <div>
+				   	<img>
+			   </div>
+			   Layout => 화면 구도 / 지도 이미지
+	fixed : 고정 좌표 : 메뉴
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.content{
+		width: 600px;
+	}	
+	#image{
+		position: fixed;
+		top: 30px;
+		right: 50px;
+		width: 300px;
+		height: 200px;
+	}
+</style>
+</head>
+<body>
+	<img src="base.jpg" id="image">
+	<div class="content">
+		<p>
+			지난해 홈쇼핑 7개 사 영업익 사상 최저
+			매출이 줄면서 판매수수료도 전년 대비 0.3%포인트 감소한 26.2%로 집계됐다. 
+			그러나 송출수수료는 2022년 1조9065억원에서 지난해 1조9375억원으로 1.6% 증가했다.
+			판매수수료는 상품이 판매될 때 부과되는 비용으로 
+			송출수수료와 방송통신발전기금, 콜센터, 물류비 카드수수료 등을 포함한다. 
+			송출수수료란 TV홈쇼핑을 비롯한 채널 사용자가 유료방송사업자에게 지급하는 채널 이용료를 의미한다. 
+			소비자들의 접근성이 좋은 지상파 채널에 근접할수록 더 많은 금액이 책정된다.	
+			상품은 전년보다 덜 팔렸는데, 송출수수료는 더 늘어난 셈이다.
+			2014년 1조372억원 수준이던 TV홈쇼핑의 송출수수료는 매년 꾸준히 증가해 10년 새 2배 가까이 커졌다. 
+			방송 매출액에서 송출 수수료가 차지하는 비중은 2021년 60%에서 지난해 71%까지 치솟았다.
+		</p>
+	</div>
+</body>
+</html>
