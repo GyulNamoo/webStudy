@@ -1,0 +1,54 @@
+<!--
+	background-image:url("")
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		width:500px;
+		height: 500px;
+		border:1px solid red;
+	}
+	#back1{
+		background-image: url("https://image.kmib.co.kr/online_image/2017/1128/611311110011938257_1.jpg");
+		background-size: 100% 100%; 
+		/* 반복 제거 */
+		background-repeat: no-repeat ;
+		background-position: 0px 10px; /* 출력 위치 설정 (left, top)*/
+	}
+	#back2{
+		overflow-y: scroll; /*y축으로 길어질경우 스크롤 사용*/
+		
+		background-image: url(back.jpg);
+		background-size: cover;
+	}
+	pre{
+		white-space: pre-wrap; /* 자동 줄바꿈 */
+	}
+</style>
+</head>
+<body>
+	<div id="back1">
+		<!--<h1>배경이미지</h1>
+		<img src="back.jpg">
+		<img src="https://image.kmib.co.kr/online_image/2017/1128/611311110011938257_1.jpg"> -->
+	</div>
+	<div id="back2">
+		<h1>"오늘 밤에라도 기름 넣어야지"…내일부터 기름값 오른다</h1>
+		<pre>
+	29일 기획재정부에 따르면 유류세 인하 조치는 오는 8월31일까지 2개월 연장됐다.
+다만 휘발유에 대한 인하율은 기존 -25%에서 -20%, 경유 및 액화석유가스(LPG) 부탄에 대한 인하율은 -37%에서 -30%로 조정됐다.
+최근 국제 유가 하락과 소비자물가가 안정화 등을 고려해 유류세 인하 폭 축소를 결정했따고 기재부는 설명했다.
+이처럼 인하율이 낮아지면서 결국 유류세는 오르게 됐다.
+
+휘발유 유류세는 1ℓ 당 656원으로 41원 오른다. 경유는 1ℓ 당 407원으로 38원, LPG는 1ℓ 당 12원 수준으로 세금이 오를 예정이다.
+한국석유공사 유가정보시스템 오피넷에 따르면 지난 28일 기준 전국 평균 휘발유 가격은 리터당 1661.67원이다.
+여기에 유류세 인하율 변경에 따른 세금 인상분 41원을 더하면 1702.67원으로 가격이 오른다.
+리터당 휘발유는 1700원대, 경유는 1500원대로 올라서고 LPG는 1000원에 육박할 것으로 전망된다.
+		</pre>
+	</div>
+</body>
+</html>

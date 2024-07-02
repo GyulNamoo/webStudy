@@ -1,0 +1,67 @@
+<!-- 
+	1. 단위
+		px / % / em
+				배수단위
+			 백분율 단위
+	2. 색상 단위
+		background-color:red
+		background-color:rgb(255,255,0)
+		background-color:#F0F(255,0,255)
+	3. URL 단위 
+		background:url('경로명')
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+ <style>
+	 p:nth-child(1){
+		 
+	 }
+	 p:nth-child(2){
+		/*font-size: 100%; */
+		font-size: 1.0em;
+		background-color: red;
+	 }
+	 p:nth-child(3){
+		 /*font-size: 200%;*/
+		 font-size:1.5em; 
+		 background-color: #F00;
+	 }
+	 p:nth-child(4){
+		 /*font-size: 300%;*/
+		 font-size:2.0em; 
+		 background-color: rgb(255,0,0);
+	 }
+	 p:nth-child(5){
+		 /*font-size: 150%;*/
+		 font-size:0.5em; /*배수 : 14px => 0.5*14 */
+		 background-color: #ff0000; 
+	 }
+	 div{
+		 width: 500px;
+		 height: 500px;
+		 background-image: url('ico_user.png');
+		 background-repeat: no-repeat;/*반복하지 않는다 = tile*/
+		 /*background-size: cover; 화면채우기*/
+		 /*background-size: width:500px height:500px;*/
+	 }
+	 h1{
+		 color: aliceblue;
+		 padding-left: 100px;
+		 padding-top: 250px;
+	 }
+ </style>
+</head>
+<body>
+	<p>매일 3.6조원 오가도 '무방비'…코인 달라지나</p>
+	<p>뉴진스님이 쏘아올린 ‘힙한 불교’···“파티 끝난 뒤 뭐가 남느냐, 화두 던져야”</p>
+	<p>원두값 폭등, 올게 왔다… 커피 제품 줄줄이 가격 인상</p>
+	<p>"집주인들은 좋겠네"…잠실 아파트, 6개월 새 4억 올랐다</p>
+	<p>비만약 팔아 삼성전자 2배 된 이 회사...제2의 엔비디아로?</p>
+	<div>
+		<h1>Hello Background</h1>
+	</div>
+</body>
+</html>
