@@ -1,57 +1,57 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>ÁÖ¼Ò·Î Àå¼Ò Ç¥½ÃÇÏ±â</title>
+    <title>ì£¼ì†Œë¡œ ì¥ì†Œ í‘œì‹œí•˜ê¸°</title>
     
 </head>
 <body>
 <p style="margin-top:-12px">
     <em class="link">
         <a href="javascript:void(0);" onclick="window.open('http://fiy.daum.net/fiy/map/CsGeneral.daum', '_blank', 'width=981, height=650')">
-            È¤½Ã ÁÖ¼Ò °á°ú°¡ Àß¸ø ³ª¿À´Â °æ¿ì¿¡´Â ¿©±â¿¡ Á¦º¸ÇØÁÖ¼¼¿ä.
+            í˜¹ì‹œ ì£¼ì†Œ ê²°ê³¼ê°€ ì˜ëª» ë‚˜ì˜¤ëŠ” ê²½ìš°ì—ëŠ” ì—¬ê¸°ì— ì œë³´í•´ì£¼ì„¸ìš”.
         </a>
     </em>
 </p>
 <div id="map" style="width:100%;height:350px;"></div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=¹ß±Ş¹ŞÀº APP KEY¸¦ »ç¿ëÇÏ¼¼¿ä&libraries=services"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d31f688c774ee2a44db46baf9b35f10e&libraries=services"></script>
 <script>
-var mapContainer = document.getElementById('map'), // Áöµµ¸¦ Ç¥½ÃÇÒ div 
+var mapContainer = document.getElementById('map'), // ì§€ë„ë¥¼ í‘œì‹œí•  div 
     mapOption = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // ÁöµµÀÇ Áß½ÉÁÂÇ¥
-        level: 3 // ÁöµµÀÇ È®´ë ·¹º§
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // ì§€ë„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
+        level: 3 // ì§€ë„ì˜ í™•ëŒ€ ë ˆë²¨
     };  
 
-// Áöµµ¸¦ »ı¼ºÇÕ´Ï´Ù    
+// ì§€ë„ë¥¼ ìƒì„±í•©ë‹ˆë‹¤    
 var map = new kakao.maps.Map(mapContainer, mapOption); 
 
-// ÁÖ¼Ò-ÁÂÇ¥ º¯È¯ °´Ã¼¸¦ »ı¼ºÇÕ´Ï´Ù
+// ì£¼ì†Œ-ì¢Œí‘œ ë³€í™˜ ê°ì²´ë¥¼ ìƒì„±í•©ë‹ˆë‹¤
 var geocoder = new kakao.maps.services.Geocoder();
 
-// ÁÖ¼Ò·Î ÁÂÇ¥¸¦ °Ë»öÇÕ´Ï´Ù
-geocoder.addressSearch('¼­¿ï ¸¶Æ÷±¸ »ó¾Ïµ¿ 1518', function(result, status) {
+// ì£¼ì†Œë¡œ ì¢Œí‘œë¥¼ ê²€ìƒ‰í•©ë‹ˆë‹¤
+geocoder.addressSearch('ì„œìš¸ ë§ˆí¬êµ¬ ìƒì•”ë™ 1518', function(result, status) {
 
-    // Á¤»óÀûÀ¸·Î °Ë»öÀÌ ¿Ï·áµÆÀ¸¸é 
+    // ì •ìƒì ìœ¼ë¡œ ê²€ìƒ‰ì´ ì™„ë£Œëìœ¼ë©´ 
      if (status === kakao.maps.services.Status.OK) {
 
         var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
 
-        // °á°ú°ªÀ¸·Î ¹ŞÀº À§Ä¡¸¦ ¸¶Ä¿·Î Ç¥½ÃÇÕ´Ï´Ù
+        // ê²°ê³¼ê°’ìœ¼ë¡œ ë°›ì€ ìœ„ì¹˜ë¥¼ ë§ˆì»¤ë¡œ í‘œì‹œí•©ë‹ˆë‹¤
         var marker = new kakao.maps.Marker({
             map: map,
             position: coords
         });
 
-        // ÀÎÆ÷À©µµ¿ì·Î Àå¼Ò¿¡ ´ëÇÑ ¼³¸íÀ» Ç¥½ÃÇÕ´Ï´Ù
+        // ì¸í¬ìœˆë„ìš°ë¡œ ì¥ì†Œì— ëŒ€í•œ ì„¤ëª…ì„ í‘œì‹œí•©ë‹ˆë‹¤
         var infowindow = new kakao.maps.InfoWindow({
-            content: '<div style="width:150px;text-align:center;padding:6px 0;">¿ì¸®È¸»ç</div>'
+            content: '<div style="width:150px;text-align:center;padding:6px 0;">ìš°ë¦¬íšŒì‚¬</div>'
         });
         infowindow.open(map, marker);
 
-        // ÁöµµÀÇ Áß½ÉÀ» °á°ú°ªÀ¸·Î ¹ŞÀº À§Ä¡·Î ÀÌµ¿½ÃÅµ´Ï´Ù
+        // ì§€ë„ì˜ ì¤‘ì‹¬ì„ ê²°ê³¼ê°’ìœ¼ë¡œ ë°›ì€ ìœ„ì¹˜ë¡œ ì´ë™ì‹œí‚µë‹ˆë‹¤
         map.setCenter(coords);
     } 
 });    

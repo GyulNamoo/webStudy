@@ -76,7 +76,9 @@ public class FoodDAO {
 		catch(Exception ex) {
 			ex.printStackTrace();
 		}
-		finally { dbConn.disConnection(conn, ps);} 
+		finally { 
+			dbConn.disConnection(conn, ps);
+		} 
 		return total;
 	}
 	
@@ -95,7 +97,7 @@ public class FoodDAO {
 	 *            UPDATE : 조회수 증가 / 찜 증가 / 좋아요 증가
 	 *            DELETE : 회원탈퇴 / 구매 취소, 예약 취소
 	 *            INSERT : 회원가입 / 장바구니 / 예약
-	 *            ========> DDL
+	 *            ========> DDL 
 	 *                          
 	 */
 	public FoodVO foodDetailData(int fno)
