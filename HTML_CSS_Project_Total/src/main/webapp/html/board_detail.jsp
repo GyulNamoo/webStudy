@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"% import="com.sist.dao.*;"%>
 <%
 	//사용자가 보내준 값을 받는다 board_detail.jsp?no=30
 	String no=request.getParameter("no");
-	BoardDAO dao = 
-
+	BoardDAO dao = BoardDAO.newInstance();
+	BoardVO vo=dao.boardDetailData(Integer.parseInt(no));
+	//vo에 저장된 값을 브라우저 출력 
 
 %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,11 +45,11 @@
 					</tr>							
 					<tr>
 						<th width="20%" class="text-center danger">제목</th>
-						<td colspan="2"><%=vo.getSubject %></td>
+						<td colspan="2"><%=vo.getSubject() %></td>
 					</tr>			
 					<tr>
 						<td colspan="4" class="text-left" valign="top" heigjt="200">
-							<pre></pre>
+							<pre style="white-space: pre-wrap;border:none;background-color: white;"></pre>
 						</td>
 					</tr>
 					<tr>

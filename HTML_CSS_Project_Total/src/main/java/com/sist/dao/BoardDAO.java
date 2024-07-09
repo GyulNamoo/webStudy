@@ -123,7 +123,8 @@ public class BoardDAO {
 			vo.setHit(rs.getInt(6));
 			rs.close();
 		}catch(Exception ex)
-		{
+		{	
+			System.out.println("===== boardDetailData(int no) =====");
 			ex.printStackTrace();
 		}
 		finally {
@@ -136,7 +137,7 @@ public class BoardDAO {
 	{
 		try
 		{
-			dbConn.getConnection();
+			conn=dbConn.getConnection();
 			String sql="INSERT INTO board VALUES( "
 					+"board_no_seq.nextval,?,?,?,?,SYSDATE,0";
 			ps=conn.prepareStatement(sql);
@@ -183,14 +184,15 @@ public class BoardDAO {
 			vo.setContent(rs.getString(4));
 			rs.close();
 			
+		} catch(Exception ex)
+		{
+			ex.printStackTrace();
 		}
+		finally {
+			dbConn.disConnection(conn, ps);
+		}
+		return vo;
 	}
-	
-	
-	
-	
-	
-	
 	
 	//CRUD => 데이터관리
 	public boolean boardUpdate(BoardVO vo)
@@ -229,6 +231,7 @@ public class BoardDAO {
 		}
 		catch(Exception ex)
 		{
+			 System.out.println("===== boardUpdate(BoardVO vo) 오류발생 =====");
 			ex.printStackTrace();
 		}
 		finally
@@ -275,4 +278,72 @@ public class BoardDAO {
 		return bCheck;
 	}
 	// 6.검색 => <select>
+	public List<BoardVO> boardFindData(String fd,String ss)
+	{
+		List<BoardVO> list = new ArrayList<BoardVO>();
+		try
+		{
+			//오라클 연결
+			conn=dbConn.getConnection();
+			String sql = "SELECT no,subject,name,TO_CHAR(regdate,'YYYY-MM-DD'),hit "
+					+ "FROM board "
+					+"WHERE " + fd + "LIKE '%'||?||'%'";
+					//ORDER BY 보다는 INDEX_ASC(테이블명 PK) => index는 pk,uk는 자동생성)
+			//오라클로 SQL문장을 전송
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, ss);
+			
+			//실행을 요청하고 결과값을 받는다
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) // rs.next()는 데이터 출력의 첫번째 위치에 cursor 이동
+			{
+				BoardVO vo= new BoardVO();
+				vo.setNo(rs.getInt(1));
+				vo.setSubject(rs.getString(2));
+				vo.setName(rs.getString(3));
+				vo.setDb_day(rs.getString(4));
+				vo.setHit(rs.getInt(5));
+				list.add(vo);
+			}
+			
+		}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}finally {
+			dbConn.disConnection(conn, ps);
+		}
+		return list;
+	}
+	
+	public int boardListCount(String fd,String ss)
+	{
+		int count=0;
+		try {
+				conn=dbConn.getConnection();
+				String sql="SELECT COUNT(*) "
+						+"FROM board "
+						+"WHERE "+fd+" LIKE '%'||?||'%'";
+				
+				ps=conn.prepareStatement(sql);
+				ps.setString(1, ss);
+				ResultSet rs=ps.executeQuery();
+				rs.next();
+				count=rs.getInt(1);
+				rs.close();
+		} catch (Exception ex) {
+			// TODO: handle exception
+			 System.out.println("===== boardFindData() 오류 발생 =====");
+			   ex.printStackTrace();
+		} finally {
+			dbConn.disConnection(conn, ps);
+		}
+		return count;
+	}
 }
+
+
+
+
+
+
