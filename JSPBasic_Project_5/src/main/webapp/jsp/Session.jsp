@@ -8,9 +8,5 @@
 </head>
 <body>
 	<h3>Session.jsp</h3>
-	<%
-		int a=100;
-	%>
-	<%=a %>
 </body>
 </html>

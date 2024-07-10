@@ -47,20 +47,24 @@
 <body>
 	<table class="table_content" width=800 height=700>
 		<tr>
-		<td colspan="2" height="100"></td>
-		<%@ include file="Header.jsp"%>
+			<td colspan="2" height="100">
+				<%@ include file="Header.jsp"%>
+			</td>
 		</tr>
 		<tr>
-		<td colspan="300" height="500"></td>
-		<%@ include file="Session.jsp"%>
+			<td width="300" height="500">
+				<%@ include file="Session.jsp"%>
+			</td>
 		</tr>
 		<tr>
-		<td colspan="500" height="500"></td>
-		<%@ include file="Aside.jsp"%>
+			<td width="500" height="500">
+				<%@ include file="Aside.jsp"%>
+			</td>
 		</tr>
 		<tr>
-		<td colspan="2" height="100"></td>
-		<%@ include file="Footer.jsp"%>
+			<td colspan="2" height="100">
+				<%@ include file="Footer.jsp"%>
+			</td>
 		</tr>
 	</table>
 </body>
