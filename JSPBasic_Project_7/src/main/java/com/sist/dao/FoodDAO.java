@@ -73,6 +73,43 @@ public class FoodDAO {
 		} finally {
 			dbConn.disConnection(conn,ps);
 		}
-		return 0;
+		return total;
+	}
+	
+	// 상세보기
+	/*
+	 * 		
+	 */
+	
+	public FoodVO foodDetailData(int fno)
+	{
+		FoodVO vo=new FoodVO();
+		try {
+			conn=dbConn.getConnection();
+			String sql="SELECT name,type,phone,address,theme,poster,content,score,fno "
+					+"FROM food_house "
+					+"WHERE fno="+fno;        //data가 1개면 문자열 결합하는게 편함 많을 경우 ? 사요ㅕㅇ
+			ps=conn.prepareStatement(sql);
+			ResultSet rs=ps.executeQuery();
+			rs.next();
+			
+			vo.setName(rs.getString(1));
+			vo.setType(rs.getString(2));
+			vo.setPhone(rs.getString(3));
+			vo.setAddress(rs.getString(4));
+			vo.setTheme(rs.getString(5));
+			vo.setPoster(rs.getString(6).replace("https","http"));
+			vo.setScore(rs.getDouble(7));
+			vo.setFno(rs.getInt(8));
+			
+			rs.close();
+		} catch (Exception ex) {
+			
+		}
+		finally
+		{
+			dbConn.disConnection(conn, ps);
+		}
+		return vo;
 	}
 }
