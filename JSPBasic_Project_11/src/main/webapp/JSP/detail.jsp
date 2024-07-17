@@ -6,7 +6,7 @@
  	//"detail.js?no="+no
  	String no = request.getParameter("no");
  	SeoulDAO dos = SeoulDAO.newInstance();
- 	LocationVO vo = dao.seoul
+ 	LocationVO vo = dao.seoulDetailData(Integer.parsInt(no));
  
  %>
 <!DOCTYPE html>
@@ -33,7 +33,7 @@
 				<tbody>
 					<tr>
 						<td class="text-center">
-							<img src="<%vo.getPoster()%>" style="width:600px height:400px;">
+							<img src="<%=vo.getPoster()%>" style="width:600px height:400px;">
 						</td>
 					</tr>
 					<tr>

@@ -28,7 +28,7 @@ public class SeoulDAO {
 			conn=ds.getConnection();
 			// 보안 (server.xml은 서버 관리자만 볼 수 있다)
 		}catch(Exception ex) {
-			
+			ex.printStackTrace();
 		}
 		
 				

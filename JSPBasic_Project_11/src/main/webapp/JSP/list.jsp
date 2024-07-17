@@ -86,7 +86,7 @@
 	
 	//DB연동
 	SeoulDAO dao = SeoulDAO.newInstance();
-	 List<LoacationVO> list = dao.seoulLoacationListdata(curpage);
+	 List<LocationVO> list = dao.seoulLocationListdata(curpage);
 	 int totalpage=dao.seoulLocationTotalPage();
 	 
 	 final int BLOCK=10;
@@ -163,7 +163,7 @@
 				<div class="col-sm-3">
 				 <div class="thumbnail">
 				   <a href="detail_before.jsp?<%=vo.getNo() %>">
-				   <img src="<%=vo.getPoster() %>" style="width: 240px; height: 200px;">
+				   <img src="<%=vo.getPoster() %>" style="width: 240px; height: 200px;" onerror="this.src='no_img.png'">
 				    <p class="a"><%=vo.getTitle()%></p>
 				   </a>
 				 </div>
@@ -179,14 +179,14 @@
 	   			if(strPage>1)
 	   			{
 	   		%>  
-	   			<li><a href="list.jsp?page=<%startPage-1%>">&lt;</a></li>
+	   			<li><a href="list.jsp?page=<%=startPage-1%>">&lt;</a></li>
 	   		<%
-	   			for(int i=startPage;i<=endPage;i++)
+	   			for(int i=startPage; i<=endPage; i++)
 	   			{
 	   		%>
-	   					<li class="<%=i==curpage?"active":""%>"><a href="list.jsp?page="><%= i%><%= %> </a></li>
+	   				<li class="<%=i==curpage?"active":""%>"><a href="list.jsp?page="<%= i%>"><%=i %> </a></li>
 	   		<%	}
-	   			if(startPage<totalpage)
+	   			if(endPage<totalpage)
 	   			{
 	   		%>
 	   			<li><a href="list.jsp?page=<%=endPage+1%>">&gt;</a></li>
