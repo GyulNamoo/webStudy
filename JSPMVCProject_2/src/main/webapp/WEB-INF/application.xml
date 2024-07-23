@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  클래스 등록 / SQL 문장 등록 
+		스프링		MyBatis
+		XML문 단점 : 태그가 사용자 정의
+				   문법이 엄격하다 
+		
+				<b>
+				</b>   => 오류
+				
+				
+				<c>
+				 <a><b>
+				 </a></b>
+				</c>
+				
+				=> 순서가 명확해야 한다
+				<a><b><c></b></c></a> => 오류
+				<a><b><c></c></b></a> => 소속관계가 명확하가
+				=> <br> : <br/>
+				
+				=> 속성값을 처리 => ""
+				============================= Vue,React => JSX (JavaScript+XML)
+			장점 : 모든 언어에 호환
+			
+				
+				=> 문서형 테이터베이스
+				루트 => table명
+
+-->
+ <beans><!--  클래스 여러개를 묶어서 저장 : 스프링 -->
+ 	<bean id="list.do" class="com.sist.model.ListModel"/>
+ 	<bean id="insert.do" class="com.sist.model.InsertModel"/>
+ 	<bean id="update.do" class="com.sist.model.UpdateModel"/>
+ 	<bean id="delete.do" class="com.sist.model.DeleteModel"/>
+ </beans>
