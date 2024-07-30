@@ -18,7 +18,7 @@ public class DbcpConnection {
 		catch(Exception ex) {
 			ex.printStackTrace();
 		}
-		return null;
+		return conn;
 	}
 	public void disConnection(Connection conn,PreparedStatement ps) {
 		try {

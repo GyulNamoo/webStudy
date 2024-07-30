@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style type="text/css">
+.brow{
+   margin: 0px auto;
+   width: 300px;
+}
+</style>
+</head>
+<body>
+<div class="wrapper row3">
+  <main class="container clear">
+	  <div class="brow">
+		   <h2 class="sectiontitle">삭제하기</h2>
+		   <table class="table">
+		   		<tr>
+		   			<td class="text-center">
+		   			 	비밀번호 : <input type="password" name=pwd size=15 class="input-sm">
+		   			 	<input type="hidden" >
+		   			</td>
+		   		</tr>
+		   		<tr>
+		   			<td class="text-center">
+		   			<button class="btn btn0sm btn-danger">수정</button>
+		   			</td>
+		   		</tr>
+		   		<tr>
+		   			<td class="text-center inline">
+		   		
+		   			</td>
+		   		</tr>
+		   </table>
+	  </div>
+   </main>
+</div>
+</body>
+</html>

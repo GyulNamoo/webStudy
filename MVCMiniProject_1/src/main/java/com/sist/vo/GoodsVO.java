@@ -3,9 +3,7 @@ package com.sist.vo;
 import lombok.Data;
 
 /*
- *  이름                                      널?      유형
- ----------------------------------------- -------- ----------------------------
- NO                                        NOT NULL NUMBER(38)
+ *  NO                                        NOT NULL NUMBER(38)
  GOODS_NAME                                         VARCHAR2(4000)
  GOODS_SUB                                          VARCHAR2(4000)
  GOODS_PRICE                                        VARCHAR2(26)
@@ -17,6 +15,6 @@ import lombok.Data;
  */
 @Data
 public class GoodsVO {
-	private int no,discount,hit;
-	private String name,sub,price,first_price,delevery,poster;
+  private int no,discount,rprice;
+  private String name,sub,price,delivery,poster;
 }
