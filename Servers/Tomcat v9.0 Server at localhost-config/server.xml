@@ -60,7 +60,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector URIEncoding="UTF-8" connectionTimeout="20000" maxParameterCount="1000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector URIEncoding="UTF-8" connectionTimeout="20000" maxParameterCount="1000" port="80" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -197,7 +197,11 @@
      <Context docBase="MVCMiniProject" path="/MVCMiniProject" reloadable="true" source="org.eclipse.jst.jee.server:MVCMiniProject">
       <Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/oracle" password="happy" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="hr"/>
      </Context>
-     <Context docBase="JSPMVCProject_Total" path="/JSPMVCProject_Total" reloadable="true" source="org.eclipse.jst.jee.server:JSPMVCProject_Total"/><Context docBase="JavaScriptProject_1" path="/JavaScriptProject_1" reloadable="true" source="org.eclipse.jst.jee.server:JavaScriptProject_1"/></Host>
+     <Context docBase="JSPMVCProject_Total" path="/JSPMVCProject_Total" reloadable="true" source="org.eclipse.jst.jee.server:JSPMVCProject_Total"/><Context docBase="JavaScriptProject_1" path="/JavaScriptProject_1" reloadable="true" source="org.eclipse.jst.jee.server:JavaScriptProject_1"/>
+     <Context docBase="JavaScriptProject_2" path="/JavaScriptProject_2" reloadable="true" source="org.eclipse.jst.jee.server:JavaScriptProject_2">
+    	<Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/oracle" password="happy" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="hr"/>
+     </Context>
+     <Context docBase="JavaScriptProject_3" path="/JavaScriptProject_3" reloadable="true" source="org.eclipse.jst.jee.server:JavaScriptProject_3"/></Host>
     </Engine>
   </Service>
 </Server>
