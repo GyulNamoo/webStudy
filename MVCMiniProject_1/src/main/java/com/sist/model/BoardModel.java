@@ -195,8 +195,19 @@ public class BoardModel {
     @RequestMapping("board/delete.do")
     public String board_delete(HttpServletRequest request,HttpServletResponse response)
     {
+    	request.setAttribute("no", request.getParameter("no"));
+    	request.setAttribute("main_jsp", "../board/delete.jsp");
+    	return "../main/main.jsp";
+    }
+    @RequestMapping("board/delete_ok.do")
+    public void board_delete_ok(HttpServletRequest request,HttpServletResponse response)
+    {
     	String no=request.getParameter("no");
-    	String 
+    	String pwd=request.getParameter("pwd");
+    	
+    	// DAO연동 
+    	boolean bCheck=dao.boardDelete(Integer.parseInt(no), pwd);
+    	// => 이동 
     	try
     	{
     	    // Ajax 처리 

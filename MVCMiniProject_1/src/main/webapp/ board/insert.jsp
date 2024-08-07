@@ -6,12 +6,15 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<style type="text/css">
-.brow{
-   margin: 0px auto;
-   width: 600px;
-}
-</style>
+ <style type="text/css">
+  .container{
+     margin-top: 50px;
+  }
+  .row{
+    margin: 0px auto;
+    width: 600px
+  }
+ </style>
 </head>
 <body>
 <%--
@@ -23,10 +26,10 @@
      ===============> DispatcherServlet(Controller) 호출 
                       => service() 메소드 호출 
  --%>
-<div class="wrapper row3">
-  <main class="container clear">
-	  <div class="brow">
-	   <h2 class="sectiontitle">글쓰기</h2>
+
+  <div class="container">
+	  <div class="row">
+	   <h3 class="text-center">글쓰기</h3>
 	   <form method=post action="../board/insert_ok.do">
 	   <table class="table">
 	     <tr>
@@ -63,7 +66,6 @@
 	   </table>
 	   </form>
 	  </div>
-  </main>
- </div>
+  </div>
 </body>
 </html>

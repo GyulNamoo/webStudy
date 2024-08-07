@@ -194,14 +194,10 @@
      
      
      
-     <Context docBase="MVCMiniProject" path="/MVCMiniProject" reloadable="true" source="org.eclipse.jst.jee.server:MVCMiniProject">
-      <Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/oracle" password="happy" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="hr"/>
-     </Context>
-     <Context docBase="JSPMVCProject_Total" path="/JSPMVCProject_Total" reloadable="true" source="org.eclipse.jst.jee.server:JSPMVCProject_Total"/><Context docBase="JavaScriptProject_1" path="/JavaScriptProject_1" reloadable="true" source="org.eclipse.jst.jee.server:JavaScriptProject_1"/>
-     <Context docBase="JavaScriptProject_2" path="/JavaScriptProject_2" reloadable="true" source="org.eclipse.jst.jee.server:JavaScriptProject_2">
-    	<Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/oracle" password="happy" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="hr"/>
-     </Context>
-     <Context docBase="JavaScriptProject_3" path="/JavaScriptProject_3" reloadable="true" source="org.eclipse.jst.jee.server:JavaScriptProject_3"/></Host>
+     
+     
+     
+     <Context docBase="JSPLastProject" path="/JSPLastProject" reloadable="true" source="org.eclipse.jst.jee.server:JSPLastProject"/><Context docBase="ArtWaveProject" path="/ArtWaveProject" reloadable="true" source="org.eclipse.jst.jee.server:ArtWaveProject"/></Host>
     </Engine>
   </Service>
 </Server>
