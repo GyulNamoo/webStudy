@@ -56,25 +56,6 @@ public class MemberDAO {
 	  }
 	  return vo;
   }
-  public static int databoardRowCount()
-  {	
-	  /*
-	   		SqlSession session=ssf.openSession()
-	   		int count=session.selectOne("databoardRowCount");
-	   		session.close();
-	   		return count;
-	   */
-	  int count=0;
-	  SqlSession session=null;
-	  try {
-		session=ssf.openSession();
-		count=session.selectOne("databoardRowCount");
-	} catch (Exception ex) {
-		ex.printStackTrace();
-	}
-	  
-	  
-  }
 }
 
 
