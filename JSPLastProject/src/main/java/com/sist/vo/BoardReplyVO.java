@@ -1,11 +1,10 @@
 package com.sist.vo;
-
-import java.util.Date;
+import java.util.*;
 
 import lombok.Data;
 @Data
 public class BoardReplyVO {
-	private int rno,bno;
-	private String id,name,msg,dbday;
-	private Date regdate;
+  private int rno,bno;
+  private String id,name,msg,dbday;
+  private Date regdate;
 }

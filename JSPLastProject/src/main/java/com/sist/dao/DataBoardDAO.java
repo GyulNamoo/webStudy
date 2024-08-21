@@ -151,12 +151,13 @@ public class DataBoardDAO {
 		  }
 	   return vo;
    }
-   // 실제 삭제
-   /*  <delete id="databoardReplyDelete" parameterType="int">
-	   	DELETE FROM project_board_reply
-	   	WHERE bno=#{no}
+   // 실제 삭제 
+   /*
+    *  <delete id="databoardReplyDelete" parameterType="int">
+	    DELETE FROM project_board_reply
+	    WHERE bno=#{no}
 	   </delete>
-	   */
+    */
    public static String databoardDelete(int no,String pwd)
    {
 	   String result="no";

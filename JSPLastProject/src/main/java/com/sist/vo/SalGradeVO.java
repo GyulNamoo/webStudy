@@ -4,5 +4,5 @@ import lombok.Data;
 
 @Data
 public class SalGradeVO {
-	private int grade,losal,hisal;
+  private int grade,losal,hisal;
 }

@@ -228,11 +228,11 @@ td{border-width:0 1px;}
 --------------------------------------------------------------------------------------------------------------- */
 body{color:#B4B4B4; background-color:#232323;}
 
-a{color:#49b0e0;}
+a{color:#E05149;}
 
 hr, .borderedbox{border-color:#D7D7D7;}
 
-label span{color:#0077ff; background-color:inherit;}
+label span{color:#FF0000; background-color:inherit;}
 
 
 /* Rows */
@@ -246,7 +246,7 @@ label span{color:#0077ff; background-color:inherit;}
 
 
 /* Header */
-#header #logo h1::first-letter{color:#499ce0;}
+#header #logo h1::first-letter{color:#E05149;}
 
 
 /* Content Area */

@@ -8,12 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>사원목록</h1>
-	<ul>
-		<c:forEach var="vo" items="${list }">
-			<li>${vo.empno }-${vo.ename }-${vo.deptno }-${vo.dbday }-${vo.job }
-			-${vo.dvo.dname }-${vo.dvo.loc }-${vo.svo.grade }</li><!--  Join  -->
-		</c:forEach>
-	</ul>
+  <h1>사원 목록</h1>
+  <ul>
+   <c:forEach var="vo" items="${list }">
+     <li>${vo.empno }-${vo.ename }-${vo.deptno }-${vo.dbday }-${ vo.job}
+         -${vo.dvo.dname }-${vo.dvo.loc }-${vo.svo.grade}</li>
+   </c:forEach>
+  </ul>
 </body>
 </html>

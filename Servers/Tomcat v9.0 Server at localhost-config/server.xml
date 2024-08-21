@@ -197,7 +197,7 @@
      
      
      
-     <Context docBase="JSPLastProject" path="/JSPLastProject" reloadable="true" source="org.eclipse.jst.jee.server:JSPLastProject"/><Context docBase="ArtWaveProject" path="/ArtWaveProject" reloadable="true" source="org.eclipse.jst.jee.server:ArtWaveProject"/></Host>
+     <Context docBase="Atest5" path="/Atest5" reloadable="true" source="org.eclipse.jst.jee.server:Atest5"/><Context docBase="JSPLastProject" path="/JSPLastProject" reloadable="true" source="org.eclipse.jst.jee.server:JSPLastProject"/><Context docBase="JSPLastProject_Copy" path="/JSPLastProject_Copy" reloadable="true" source="org.eclipse.jst.jee.server:JSPLastProject_Copy"/><Context docBase="ArtWaveProject" path="/ArtWaveProject" reloadable="true" source="org.eclipse.jst.jee.server:ArtWaveProject"/></Host>
     </Engine>
   </Service>
 </Server>
